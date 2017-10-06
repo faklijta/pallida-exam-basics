@@ -17,6 +17,52 @@
 # The CandyShop should be represented as string in this format:
 # "Inventory: 3 candies, 2 lollipops, Income: 100, Sugar: 400gr"
 
+class CandyShop(object):
+    def __init__(self, sugar, money):
+        self.sugar = 0
+        self.money = money
+        self.storage = []
+
+    def add_to_storage(self):
+        self.storage.append(Sweets(type_of_sweet))
+
+class Sweets(object):
+    def __init__(self, type_of_sweet):
+        self.type_of_sweet = type_of_sweet
+        if self.type_of_sweet == "lollipop":
+            self.price = 10
+            self.sugar = 5
+        if self.type_of_sweet = "candie":
+            self.price = 20
+            self.sugar = 10
+
+    def price_increase(self, percent):
+        self.new_price = selp.price * (percent / 100)
+
+    def create_lollipop(self):
+        pass #CandyShop's sugar amount gets reduced by the amount needed to create the sweets
+
+    def create_candies(self):
+        pass #CandyShop's sugar amount gets reduced by the amount needed to create the sweets
+
+    def sell_sweets(self, number):
+        pass
+# We can sell candie or lollipop with a given number as amount
+# If we sell sweets the income will be increased by the price of the sweets and we delete it from the inventory
+
+    def buy_sugar(self, ammount):
+        pass
+# We can buy sugar with a given number as amount. The price of 1000gr sugar is 100$
+# If we buy sugar we can raise the CandyShop's amount of sugar and reduce the income by the price of it.
+
+
+
+
+
+
+
+
+
 candy_shop = CandyShop(300)
 candy_shop.create_sweets("candy")
 candy_shop.create_sweets("candy")
